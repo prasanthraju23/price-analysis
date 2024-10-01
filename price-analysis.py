@@ -1,3 +1,17 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from amazoncaptcha import AmazonCaptcha
+import pandas as pd
+
+import re
+
+from time import sleep,time
+
 def price_analysis(self,link):
         self.driver.get("https://pricehistoryapp.com/")
         self.driver.find_element(By.XPATH,"//input[@placeholder='Enter name or paste the product link']").send_keys(link+Keys.ENTER)
